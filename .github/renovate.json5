@@ -8,6 +8,9 @@
   "ignoreDeps": [
       "io.jenkins.tools.bom:parent"
   ],
+  "ignorePaths": [
+      "bom-*.x/pom.xml"
+  ],
   "customManagers": [
     {
       "customType": "regex",
@@ -40,7 +43,6 @@
       "matchFileNames": [
         "sample-plugin/**"
       ],
-      "automerge": true,
       "prConcurrentLimit": 10,
     },
     {
@@ -48,7 +50,6 @@
       "matchFileNames": [
         "bom-weekly/**"
       ],
-      "automerge": true,
       "prConcurrentLimit": 25,
       // dependency updates to plugin BOM are developer relevant changes
       // developer label assures CD process will release with this change
